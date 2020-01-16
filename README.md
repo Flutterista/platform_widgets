@@ -1,7 +1,7 @@
 # Platform Widgets
 
-![Flutter] (https://img.shields.io/badge/sdk-Flutter-9cf)
-![Dart] (https://img.shields.io/badge/language-Dart-blue)
+![Flutter](https://img.shields.io/badge/sdk-Flutter-9cf)
+![Dart](https://img.shields.io/badge/language-Dart-blue)
 
 A Flutter plugin for Platform specific widgets.
 
