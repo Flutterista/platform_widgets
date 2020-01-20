@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:platform_widgets/base/platform_app.dart';
 import 'package:platform_widgets/platform_scaffold.dart';
+import 'package:platform_widgets/platform_button.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlatformApp(
       home: PlatformScaffold(
-        child: Container(),
+        child: Center(
+          child: PlatformButton(
+            child: Text('Example Button'),
+            onPressed: () => print('On Button Pressed'),
+          ),
+        )
       ),
     );
   }
