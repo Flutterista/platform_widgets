@@ -6,7 +6,7 @@ import 'dart:io' show Platform;
 
 void main() {
   testWidgets('', (WidgetTester tester) async {
-    await tester.pumpWidget(PlatformScaffold());
+    await tester.pumpWidget(PlatformScaffold(child: Container()));
 
     if (Platform.isIOS) {
       final cupertinoScaffoldFinder = find.byElementType(CupertinoPageScaffold);

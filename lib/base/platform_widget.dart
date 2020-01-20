@@ -4,7 +4,6 @@ import 'dart:io' show Platform;
 
 abstract class PlatformWidget<I extends Widget, A extends Widget>
     extends StatelessWidget {
-      
   I createIosWidget(BuildContext context);
   A createAndroidWidget(BuildContext context);
 
