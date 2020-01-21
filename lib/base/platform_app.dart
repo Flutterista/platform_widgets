@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
 
+import 'platform_theme.dart';
+
 class PlatformApp extends StatefulWidget {
   PlatformApp({
     Key key,
@@ -25,7 +27,10 @@ class PlatformApp extends StatefulWidget {
     this.checkerboardRasterCacheImages = false,
     this.checkerboardOffscreenLayers = false,
     this.showSemanticsDebugger = false,
-    this.debugShowCheckedModeBanner = true,
+    this.debugShowCheckedModeBanner = true, 
+    this.platformTheme, 
+    this.materialDarkTheme, 
+    this.materialThemeMode,
   }) : assert(routes != null),
        assert(navigatorObservers != null),
        assert(title != null),
@@ -57,6 +62,11 @@ class PlatformApp extends StatefulWidget {
   final bool checkerboardOffscreenLayers;
   final bool showSemanticsDebugger;
   final bool debugShowCheckedModeBanner;
+  final PlatformTheme platformTheme;
+
+  /// Only used in MaterialApp
+  final ThemeData materialDarkTheme;
+  final ThemeMode materialThemeMode;
 
   CupertinoApp createIosApp(BuildContext context) {
     return CupertinoApp(
@@ -81,6 +91,7 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+      theme: platformTheme.ios,
     );
   }
 
@@ -107,6 +118,9 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+      theme: platformTheme.android,
+      darkTheme: materialDarkTheme,
+      themeMode: materialThemeMode,
     );
   }
 
