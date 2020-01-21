@@ -2,3 +2,8 @@
 
 - Initial structure
 - PlatformApp and PlatformScaffold Widgets
+
+## [0.1.0] - 20/01/2020
+
+- App to exemplify plugin
+- PlatformButton and PlatformBar Widgets

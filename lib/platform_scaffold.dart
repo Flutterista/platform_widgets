@@ -3,7 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PlatformScaffold extends PlatformWidget<CupertinoPageScaffold, Scaffold> {
-  PlatformScaffold({this.title, this.child, this.appbar, this.backgroundColor});
+  PlatformScaffold({
+    this.title, 
+    @required this.child, 
+    this.appbar, 
+    this.backgroundColor
+  });
 
   final String title;
   final Widget child;
