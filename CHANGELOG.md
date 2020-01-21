@@ -7,3 +7,9 @@
 
 - App to exemplify plugin
 - PlatformButton and PlatformBar Widgets
+
+## [0.1.1] - 21/01/2020
+
+- Added PlatformTheme
+- Fixed formatting issues
+- Some analysis error resolved

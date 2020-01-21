@@ -1,6 +1,6 @@
 name: platform_widgets
 description: A Flutter plugin for Platform widgets. This package simplifies the usage of specific widgets for both Android and iOS.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/Flutterista
 repository: https://github.com/Flutterista/platform_widgets
 issue_tracker: https://github.com/Flutterista/platform_widgets/issues
