@@ -12,6 +12,8 @@ To use this plugin, add platform_widgets as a [dependency in your pubspec.yaml f
 
 - `PlatformApp` returns **CupertinoApp** when iOS and **MaterialApp** when Android.
 
+- `PlatformTheme`'s `ios` property returns **CupertinoThemeData** and `android` property returns **ThemeData**.
+
 - `PlatformScaffold` returns **CupertinoPageScaffold** when iOS and **Scaffold** when Android.
 
 - `PlatformButton` returns **CupertinoButton** when iOS and **FlatButton** when Android.

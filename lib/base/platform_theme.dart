@@ -7,7 +7,8 @@ class PlatformTheme extends Diagnosticable {
     this.brightness,
     this.primaryColor,
     this.primaryContrastingColor,
-    this.textTheme,
+    this.cupertinoTextTheme,
+    this.materialTextTheme,
     this.barBackgroundColor,
     this.scaffoldBackgroundColor,
   });
@@ -15,15 +16,20 @@ class PlatformTheme extends Diagnosticable {
   final Brightness brightness;
   final Color primaryColor;
   final Color primaryContrastingColor;
-  final CupertinoTextThemeData textTheme;
   final Color barBackgroundColor;
   final Color scaffoldBackgroundColor;
+
+  /// Only used in CupertinoThemeData
+  final CupertinoTextThemeData cupertinoTextTheme;
+
+  /// Only used in ThemeData
+  final TextTheme materialTextTheme;
 
   CupertinoThemeData get ios => CupertinoThemeData(
         brightness: brightness,
         primaryColor: primaryColor,
         primaryContrastingColor: primaryContrastingColor,
-        textTheme: textTheme,
+        textTheme: cupertinoTextTheme,
         barBackgroundColor: barBackgroundColor,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
       );
@@ -32,7 +38,7 @@ class PlatformTheme extends Diagnosticable {
         brightness: brightness,
         primaryColor: primaryColor,
         accentColor: primaryContrastingColor,
-        textTheme: null,
+        textTheme: materialTextTheme,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         bottomAppBarColor: barBackgroundColor,
       );
