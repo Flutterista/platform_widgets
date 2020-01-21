@@ -26,8 +26,6 @@ class PlatformApp extends StatefulWidget {
     this.checkerboardOffscreenLayers = false,
     this.showSemanticsDebugger = false,
     this.debugShowCheckedModeBanner = true,
-    this.shortcuts,
-    this.actions,
   }) : assert(routes != null),
        assert(navigatorObservers != null),
        assert(title != null),
@@ -59,8 +57,6 @@ class PlatformApp extends StatefulWidget {
   final bool checkerboardOffscreenLayers;
   final bool showSemanticsDebugger;
   final bool debugShowCheckedModeBanner;
-  final Map<LogicalKeySet, Intent> shortcuts;
-  final Map<LocalKey, ActionFactory> actions;
 
   CupertinoApp createIosApp(BuildContext context) {
     return CupertinoApp(
@@ -85,8 +81,6 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-      shortcuts: shortcuts,
-      actions: actions,
     );
   }
 
@@ -113,8 +107,6 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-      shortcuts: shortcuts,
-      actions: actions,
     );
   }
 

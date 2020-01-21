@@ -22,7 +22,6 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
     this.highlightColor,
     this.splashColor,
     this.colorBrightness,
-    this.visualDensity,
     this.shape,
     this.clipBehavior = Clip.none,
     this.focusNode,
@@ -51,7 +50,6 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
   final Color highlightColor;
   final Color splashColor;
   final Brightness colorBrightness;
-  final VisualDensity visualDensity;
   final ShapeBorder shape;
   final Clip clipBehavior;
   final FocusNode focusNode;
@@ -88,7 +86,6 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
       highlightColor: highlightColor,
       splashColor: splashColor,
       colorBrightness: colorBrightness,
-      visualDensity: visualDensity,
       shape: shape,
       clipBehavior: clipBehavior,
       focusNode: focusNode,
