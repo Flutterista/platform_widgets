@@ -2,14 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_widgets/base/platform_widget.dart';
 
-class PlatformBar extends PlatformWidget<CupertinoNavigationBar, AppBar> with ObstructingPreferredSizeWidget {
+class PlatformBar extends PlatformWidget<CupertinoNavigationBar, AppBar> implements ObstructingPreferredSizeWidget {
 
   PlatformBar({
     this.middle,
     this.leading,
     this.automaticallyImplyLeading = true,
     this.backgroundColor,
-    this.brightness,
     this.cupertinoTrailing,
     this.cupertinoAutomaticallyImplyMiddle = true,
     this.cupertinoPreviousPageTitle,
@@ -36,7 +35,6 @@ class PlatformBar extends PlatformWidget<CupertinoNavigationBar, AppBar> with Ob
   final Widget leading;
   final bool automaticallyImplyLeading;
   final Color backgroundColor;
-  final Brightness brightness;
 
   /// Only used in NavigationBar
   final Widget cupertinoTrailing;
@@ -69,7 +67,6 @@ class PlatformBar extends PlatformWidget<CupertinoNavigationBar, AppBar> with Ob
       middle: middle,
       automaticallyImplyLeading: automaticallyImplyLeading,
       backgroundColor: backgroundColor,
-      brightness: brightness,
       trailing: cupertinoTrailing,
       automaticallyImplyMiddle: cupertinoAutomaticallyImplyMiddle,
       padding: cupertinoPadding,
@@ -86,7 +83,6 @@ class PlatformBar extends PlatformWidget<CupertinoNavigationBar, AppBar> with Ob
       title: middle,
       automaticallyImplyLeading: automaticallyImplyLeading,
       backgroundColor: backgroundColor,
-      brightness: brightness,
       actions: materialActions,
       flexibleSpace: materialFlexibleSpace,
       bottom: materialBottom,

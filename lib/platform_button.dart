@@ -10,23 +10,22 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
     this.padding,
     this.color,
     this.disabledColor,
-    this.pressedOpacity =  0.4,
-    this.borderRadius = const BorderRadius.all(Radius.circular(8.0)),
-    this.onLongPress,
-    this.onHighlightChanged,
-    this.textTheme,
-    this.textColor,
-    this.disabledTextColor,
-    this.focusColor,
-    this.hoverColor,
-    this.highlightColor,
-    this.splashColor,
-    this.colorBrightness,
-    this.visualDensity,
-    this.shape,
-    this.clipBehavior = Clip.none,
-    this.focusNode,
-    this.autofocus = false,
+    this.cupertinoPressedOpacity =  0.4,
+    this.cupertinoBorderRadius = const BorderRadius.all(Radius.circular(8.0)),
+    this.materialOnLongPress,
+    this.materialOnHighlightChanged,
+    this.materialTextTheme,
+    this.materialTextColor,
+    this.materialDisabledTextColor,
+    this.materialFocusColor,
+    this.materialHoverColor,
+    this.materialHighlightColor,
+    this.materialSplashColor,
+    this.materialColorBrightness,
+    this.materialShape,
+    this.materialClipBehavior = Clip.none,
+    this.materialFocusNode,
+    this.materialAutofocus = false,
     this.materialTapTargetSize,
   });
 
@@ -37,25 +36,24 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
   final Color disabledColor;
 
   /// Only used in CupertinoButton
-  final double pressedOpacity;
-  final BorderRadius borderRadius;
+  final double cupertinoPressedOpacity;
+  final BorderRadius cupertinoBorderRadius;
 
   /// Only used in FlatButton
-  final VoidCallback onLongPress;
-  final ValueChanged<bool> onHighlightChanged;
-  final ButtonTextTheme textTheme;
-  final Color textColor;
-  final Color disabledTextColor;
-  final Color focusColor;
-  final Color hoverColor;
-  final Color highlightColor;
-  final Color splashColor;
-  final Brightness colorBrightness;
-  final VisualDensity visualDensity;
-  final ShapeBorder shape;
-  final Clip clipBehavior;
-  final FocusNode focusNode;
-  final bool autofocus;
+  final VoidCallback materialOnLongPress;
+  final ValueChanged<bool> materialOnHighlightChanged;
+  final ButtonTextTheme materialTextTheme;
+  final Color materialTextColor;
+  final Color materialDisabledTextColor;
+  final Color materialFocusColor;
+  final Color materialHoverColor;
+  final Color materialHighlightColor;
+  final Color materialSplashColor;
+  final Brightness materialColorBrightness;
+  final ShapeBorder materialShape;
+  final Clip materialClipBehavior;
+  final FocusNode materialFocusNode;
+  final bool materialAutofocus;
   final MaterialTapTargetSize materialTapTargetSize;
 
   @override
@@ -66,8 +64,8 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
       padding: padding,
       color: color,
       disabledColor: disabledColor ?? CupertinoColors.quaternarySystemFill,
-      pressedOpacity: pressedOpacity,
-      borderRadius: borderRadius,
+      pressedOpacity: cupertinoPressedOpacity,
+      borderRadius: cupertinoBorderRadius,
     );
   }
 
@@ -79,20 +77,19 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
       padding: padding,
       color: color,
       disabledColor: disabledColor,
-      onLongPress: onLongPress,
-      onHighlightChanged: onHighlightChanged,
-      textTheme: textTheme,
-      textColor: textColor,
-      disabledTextColor: disabledTextColor,
-      hoverColor: hoverColor,
-      highlightColor: highlightColor,
-      splashColor: splashColor,
-      colorBrightness: colorBrightness,
-      visualDensity: visualDensity,
-      shape: shape,
-      clipBehavior: clipBehavior,
-      focusNode: focusNode,
-      autofocus: autofocus,
+      onLongPress: materialOnLongPress,
+      onHighlightChanged: materialOnHighlightChanged,
+      textTheme: materialTextTheme,
+      textColor: materialTextColor,
+      disabledTextColor: materialDisabledTextColor,
+      hoverColor: materialHoverColor,
+      highlightColor: materialHighlightColor,
+      splashColor: materialSplashColor,
+      colorBrightness: materialColorBrightness,
+      shape: materialShape,
+      clipBehavior: materialClipBehavior,
+      focusNode: materialFocusNode,
+      autofocus: materialAutofocus,
       materialTapTargetSize: materialTapTargetSize,
     );
   }
