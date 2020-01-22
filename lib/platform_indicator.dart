@@ -4,7 +4,7 @@ import 'package:platform_widgets/base/platform_widget.dart';
 
 class PlatformIndicator extends PlatformWidget<CupertinoActivityIndicator, CircularProgressIndicator> {
   PlatformIndicator({
-    this.key, 
+    Key key, 
     this.materialValue,
     this.materialBackgroundColor, 
     this.materialValueColor, 
@@ -14,8 +14,6 @@ class PlatformIndicator extends PlatformWidget<CupertinoActivityIndicator, Circu
     this.cupertinoAnimating, 
     this.cupertinoRadius = 10.0,
   });
-
-  final Key key;
 
   /// Only used in CircularProgressIndicator
   final Color materialBackgroundColor;
