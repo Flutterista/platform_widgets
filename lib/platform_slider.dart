@@ -48,7 +48,7 @@ class PlatformSlider extends PlatformWidget<CupertinoSlider, Slider> {
       label: this.materialLabel,
       activeColor: this.activeColor,
       inactiveColor: this.materialInactiveColor,
-      semanticFormatterCallback: materialSemanticFormatterCallback,
+      semanticFormatterCallback: this.materialSemanticFormatterCallback,
     );
   }
 

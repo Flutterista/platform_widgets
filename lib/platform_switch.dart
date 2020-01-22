@@ -18,7 +18,7 @@ class PlatformSwitch extends PlatformWidget<CupertinoSwitch, Switch> {
     this.materialFocusColor,
     this.materialHoverColor,
     this.materialFocusNode,
-    this.materialAutofocus,
+    this.materialAutofocus = false,
   });
 
   final bool value;
