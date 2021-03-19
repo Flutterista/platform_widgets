@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 
 class PlatformScaffold extends PlatformWidget<CupertinoPageScaffold, Scaffold> {
   PlatformScaffold({
-    @required this.child,
+    required this.child,
     this.appbar,
     this.backgroundColor,
   });
 
   final Widget child;
-  final Widget appbar;
-  final Color backgroundColor;
+  final Widget? appbar;
+  final Color? backgroundColor;
 
   @override
   CupertinoPageScaffold createIosWidget(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: appbar,
+      navigationBar: appbar as ObstructingPreferredSizeWidget?,
       child: child,
       backgroundColor: backgroundColor,
     );
@@ -25,7 +25,7 @@ class PlatformScaffold extends PlatformWidget<CupertinoPageScaffold, Scaffold> {
   @override
   Scaffold createAndroidWidget(BuildContext context) {
     return Scaffold(
-      appBar: appbar,
+      appBar: appbar as PreferredSizeWidget?,
       body: child,
       backgroundColor: backgroundColor,
     );

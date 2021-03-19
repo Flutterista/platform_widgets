@@ -21,27 +21,27 @@ class PlatformSwitch extends PlatformWidget<CupertinoSwitch, Switch> {
     this.materialAutofocus = false,
   });
 
-  final bool value;
-  final ValueChanged<bool> onChanged;
-  final Color activeColor;
+  final bool? value;
+  final ValueChanged<bool>? onChanged;
+  final Color? activeColor;
   final DragStartBehavior dragStartBehavior;
 
   /// Only used in Switch
-  final MaterialTapTargetSize materialTapTargetSize;
-  final Color materialActiveTrackColor;
-  final Color materialInactiveTrackColor;
-  final ImageProvider materialActiveThumbImage;
-  final ImageProvider materialInactiveThumbImage;
-  final Color materialInactiveThumbColor;
-  final Color materialFocusColor;
-  final Color materialHoverColor;
-  final FocusNode materialFocusNode;
+  final MaterialTapTargetSize? materialTapTargetSize;
+  final Color? materialActiveTrackColor;
+  final Color? materialInactiveTrackColor;
+  final ImageProvider? materialActiveThumbImage;
+  final ImageProvider? materialInactiveThumbImage;
+  final Color? materialInactiveThumbColor;
+  final Color? materialFocusColor;
+  final Color? materialHoverColor;
+  final FocusNode? materialFocusNode;
   final bool materialAutofocus;
 
   @override
   Switch createAndroidWidget(BuildContext context) {
     return Switch(
-      value: this.value,
+      value: this.value!,
       onChanged: this.onChanged,
       activeColor: this.activeColor,
       activeTrackColor: this.materialActiveTrackColor,
@@ -62,7 +62,7 @@ class PlatformSwitch extends PlatformWidget<CupertinoSwitch, Switch> {
   CupertinoSwitch createIosWidget(BuildContext context) {
     return CupertinoSwitch(
       onChanged: this.onChanged,
-      value: this.value,
+      value: this.value!,
       activeColor: this.activeColor,
       dragStartBehavior: this.dragStartBehavior,
     );
