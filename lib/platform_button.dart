@@ -5,8 +5,8 @@ import 'package:platform_widgets/base/platform_widget.dart';
 class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
 
   PlatformButton({
-    @required this.child,
-    @required this.onPressed,
+    required this.child,
+    required this.onPressed,
     this.padding,
     this.color,
     this.disabledColor,
@@ -31,30 +31,30 @@ class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
 
   final Widget child;
   final VoidCallback onPressed;
-  final EdgeInsetsGeometry padding;
-  final Color color;
-  final Color disabledColor;
+  final EdgeInsetsGeometry? padding;
+  final Color? color;
+  final Color? disabledColor;
 
   /// Only used in CupertinoButton
   final double cupertinoPressedOpacity;
   final BorderRadius cupertinoBorderRadius;
 
   /// Only used in FlatButton
-  final VoidCallback materialOnLongPress;
-  final ValueChanged<bool> materialOnHighlightChanged;
-  final ButtonTextTheme materialTextTheme;
-  final Color materialTextColor;
-  final Color materialDisabledTextColor;
-  final Color materialFocusColor;
-  final Color materialHoverColor;
-  final Color materialHighlightColor;
-  final Color materialSplashColor;
-  final Brightness materialColorBrightness;
-  final ShapeBorder materialShape;
+  final VoidCallback? materialOnLongPress;
+  final ValueChanged<bool>? materialOnHighlightChanged;
+  final ButtonTextTheme? materialTextTheme;
+  final Color? materialTextColor;
+  final Color? materialDisabledTextColor;
+  final Color? materialFocusColor;
+  final Color? materialHoverColor;
+  final Color? materialHighlightColor;
+  final Color? materialSplashColor;
+  final Brightness? materialColorBrightness;
+  final ShapeBorder? materialShape;
   final Clip materialClipBehavior;
-  final FocusNode materialFocusNode;
+  final FocusNode? materialFocusNode;
   final bool materialAutofocus;
-  final MaterialTapTargetSize materialTapTargetSize;
+  final MaterialTapTargetSize? materialTapTargetSize;
 
   @override
   CupertinoButton createIosWidget(BuildContext context) {

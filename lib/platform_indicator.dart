@@ -4,7 +4,7 @@ import 'package:platform_widgets/base/platform_widget.dart';
 
 class PlatformIndicator extends PlatformWidget<CupertinoActivityIndicator, CircularProgressIndicator> {
   PlatformIndicator({
-    Key key, 
+    Key? key, 
     this.materialValue,
     this.materialBackgroundColor, 
     this.materialValueColor, 
@@ -16,15 +16,15 @@ class PlatformIndicator extends PlatformWidget<CupertinoActivityIndicator, Circu
   });
 
   /// Only used in CircularProgressIndicator
-  final Color materialBackgroundColor;
-  final double materialValue;
-  final Animation<Color> materialValueColor;
+  final Color? materialBackgroundColor;
+  final double? materialValue;
+  final Animation<Color>? materialValueColor;
   final double materialStrokeWidth;
-  final String materialSemanticsLabel;
-  final String materialSemanticsValue;
+  final String? materialSemanticsLabel;
+  final String? materialSemanticsValue;
 
   /// Only used in CupertinoActivityIndicator
-  final bool cupertinoAnimating;
+  final bool? cupertinoAnimating;
   final double cupertinoRadius;
 
   @override
@@ -42,7 +42,7 @@ class PlatformIndicator extends PlatformWidget<CupertinoActivityIndicator, Circu
   @override
   CupertinoActivityIndicator createIosWidget(BuildContext context) {
     return CupertinoActivityIndicator(
-      animating: this.cupertinoAnimating,
+      animating: this.cupertinoAnimating!,
       key: this.key, 
       radius: this.cupertinoRadius,
     );

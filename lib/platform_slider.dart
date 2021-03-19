@@ -18,19 +18,19 @@ class PlatformSlider extends PlatformWidget<CupertinoSlider, Slider> {
     this.materialSemanticFormatterCallback,
   });
 
-  final double value;
-  final ValueChanged<double> onChanged;
-  final ValueChanged<double> onChangeStart;
-  final ValueChanged<double> onChangeEnd;
+  final double? value;
+  final ValueChanged<double>? onChanged;
+  final ValueChanged<double>? onChangeStart;
+  final ValueChanged<double>? onChangeEnd;
   final double min;
   final double max;
-  final int divisions;
-  final Color activeColor;
+  final int? divisions;
+  final Color? activeColor;
 
   /// Only used in Slider
-  final String materialLabel;
-  final Color materialInactiveColor;
-  final SemanticFormatterCallback materialSemanticFormatterCallback;
+  final String? materialLabel;
+  final Color? materialInactiveColor;
+  final SemanticFormatterCallback? materialSemanticFormatterCallback;
 
   /// Only used in CupertinoSlider
   final Color cupertinoThumbColor;
@@ -38,7 +38,7 @@ class PlatformSlider extends PlatformWidget<CupertinoSlider, Slider> {
   @override
   Slider createAndroidWidget(BuildContext context) {
     return Slider(
-      value: this.value,
+      value: this.value!,
       onChanged: this.onChanged,
       onChangeStart: this.onChangeStart,
       onChangeEnd: this.onChangeEnd,
@@ -55,7 +55,7 @@ class PlatformSlider extends PlatformWidget<CupertinoSlider, Slider> {
   @override
   CupertinoSlider createIosWidget(BuildContext context) {
     return CupertinoSlider(
-      value: this.value,
+      value: this.value!,
       onChanged: this.onChanged,
       onChangeStart: this.onChangeStart,
       onChangeEnd: this.onChangeEnd,

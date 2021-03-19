@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class PlatformTheme extends Diagnosticable {
+class PlatformTheme with Diagnosticable {
   const PlatformTheme({
     this.brightness,
     this.primaryColor,
@@ -13,17 +13,17 @@ class PlatformTheme extends Diagnosticable {
     this.scaffoldBackgroundColor,
   });
 
-  final Brightness brightness;
-  final Color primaryColor;
-  final Color primaryContrastingColor;
-  final Color barBackgroundColor;
-  final Color scaffoldBackgroundColor;
+  final Brightness? brightness;
+  final Color? primaryColor;
+  final Color? primaryContrastingColor;
+  final Color? barBackgroundColor;
+  final Color? scaffoldBackgroundColor;
 
   /// Only used in CupertinoThemeData
-  final CupertinoTextThemeData cupertinoTextTheme;
+  final CupertinoTextThemeData? cupertinoTextTheme;
 
   /// Only used in ThemeData
-  final TextTheme materialTextTheme;
+  final TextTheme? materialTextTheme;
 
   CupertinoThemeData get ios => CupertinoThemeData(
         brightness: brightness,

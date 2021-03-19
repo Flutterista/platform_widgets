@@ -6,7 +6,7 @@ import 'platform_theme.dart';
 
 class PlatformApp extends StatefulWidget {
   PlatformApp({
-    Key key,
+    Key? key,
     this.navigatorKey,
     this.home,
     this.routes = const <String, WidgetBuilder>{},
@@ -41,32 +41,32 @@ class PlatformApp extends StatefulWidget {
        assert(debugShowCheckedModeBanner != null),
        super(key: key);
 
-  final GlobalKey<NavigatorState> navigatorKey;
-  final Widget home;
+  final GlobalKey<NavigatorState>? navigatorKey;
+  final Widget? home;
   final Map<String, WidgetBuilder> routes;
-  final String initialRoute;
-  final RouteFactory onGenerateRoute;
-  final RouteFactory onUnknownRoute;
+  final String? initialRoute;
+  final RouteFactory? onGenerateRoute;
+  final RouteFactory? onUnknownRoute;
   final List<NavigatorObserver> navigatorObservers;
-  final TransitionBuilder builder;
+  final TransitionBuilder? builder;
   final String title;
-  final GenerateAppTitle onGenerateTitle;
-  final Color color;
-  final Locale locale;
-  final Iterable<LocalizationsDelegate<dynamic>> localizationsDelegates;
-  final LocaleListResolutionCallback localeListResolutionCallback;
-  final LocaleResolutionCallback localeResolutionCallback;
+  final GenerateAppTitle? onGenerateTitle;
+  final Color? color;
+  final Locale? locale;
+  final Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates;
+  final LocaleListResolutionCallback? localeListResolutionCallback;
+  final LocaleResolutionCallback? localeResolutionCallback;
   final Iterable<Locale> supportedLocales;
   final bool showPerformanceOverlay;
   final bool checkerboardRasterCacheImages;
   final bool checkerboardOffscreenLayers;
   final bool showSemanticsDebugger;
   final bool debugShowCheckedModeBanner;
-  final PlatformTheme platformTheme;
+  final PlatformTheme? platformTheme;
 
   /// Only used in MaterialApp
-  final ThemeData materialDarkTheme;
-  final ThemeMode materialThemeMode;
+  final ThemeData? materialDarkTheme;
+  final ThemeMode? materialThemeMode;
 
   CupertinoApp createIosApp(BuildContext context) {
     return CupertinoApp(
@@ -91,7 +91,7 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-      theme: platformTheme.ios,
+      theme: platformTheme!.ios,
     );
   }
 
@@ -118,7 +118,7 @@ class PlatformApp extends StatefulWidget {
       checkerboardOffscreenLayers: checkerboardOffscreenLayers,
       showSemanticsDebugger: showSemanticsDebugger,
       debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-      theme: platformTheme.android,
+      theme: platformTheme!.android,
       darkTheme: materialDarkTheme,
       themeMode: materialThemeMode,
     );
@@ -133,8 +133,8 @@ class PlatformApp extends StatefulWidget {
 
 class _PlatformAppState<I, A> extends State<PlatformApp> {
   _PlatformAppState({
-    @required this.createIosApp,
-    @required this.createAndroidApp,
+    required this.createIosApp,
+    required this.createAndroidApp,
   });
 
   Function createIosApp;
